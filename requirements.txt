@@ -1,0 +1,13 @@
+langchain
+sentence_transformers
+transformers
+torch
+ctransformers
+
+#testing
+pylint
+pytest
+black
+
+#vector database
+faiss_cpu
