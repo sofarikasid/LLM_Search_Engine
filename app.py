@@ -34,12 +34,16 @@ Only return the helpful OFFERS below as a list.
 OFFERS:
 """
 
+
 def set_custom_prompt():
     """
     Prompt template for QA retrieval for each vectorstore
     """
-    prompt = PromptTemplate(template=custom_prompt_template, input_variables=['context', 'question'])
+    prompt = PromptTemplate(
+        template=custom_prompt_template, input_variables=["context", "question"]
+    )
     return prompt
+
 
 def similar_offer(llm, prompt, db):
     """
@@ -48,11 +52,12 @@ def similar_offer(llm, prompt, db):
     qa_chain = RetrievalQA.from_chain_type(
         llm=llm,
         chain_type="stuff",
-        retriever=db.as_retriever(search_kwargs={"k": 2}),
+        retriever=db.as_retriever(search_kwargs={"k": 20}),
         return_source_documents=True,
         chain_type_kwargs={"prompt": prompt},
     )
     return qa_chain
+
 
 def generate_response(query):
     """
@@ -63,24 +68,25 @@ def generate_response(query):
     response = qa_result({"query": query})  # Pass the query in a dictionary
     return response
 
+
 def main():
     st.title("🦜🔗 Fetch Reward Search ChatBot")
     query = st.text_input("Find offers you love!")
 
-        # "Enter" button
+    # "Enter" button
     if st.button("Enter"):
-
         if query:
             response = generate_response(query)
             st.text("Answer:")
             st.write(response["result"])
-            
+
             sources = response["source_documents"]
             if sources:
                 st.text("Sources:")
                 st.write(sources)
             else:
                 st.text("No sources found")
+
 
 if __name__ == "__main__":
     main()
