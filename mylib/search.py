@@ -26,12 +26,12 @@ llm = CTransformers(
 
 # Initialize the QA chain once
 # qa = RetrievalQA.from_chain_type(llm=llm, chain_type='stuff', retriever=db.as_retriever(search_kwargs={'k': 10}), return_source_documents=True)
-#retriever = db.as_retriever(search_kwargs={"k": 10})
+# retriever = db.as_retriever(search_kwargs={"k": 10})
 
 
 def final_result(query):
-    docs_and_scores = db.similarity_search_with_score(query,k=10)
-    #response = retriever.get_relevant_documents(query)
+    docs_and_scores = db.similarity_search_with_score(query, k=10)
+    # response = retriever.get_relevant_documents(query)
     return docs_and_scores
 
 
