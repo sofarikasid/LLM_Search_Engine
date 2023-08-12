@@ -30,7 +30,7 @@ llm = CTransformers(
 
 
 def final_result(query):
-    docs_and_scores = db.similarity_search_with_score(query)
+    docs_and_scores = db.similarity_search_with_score(query,k=10)
     #response = retriever.get_relevant_documents(query)
     return docs_and_scores
 
