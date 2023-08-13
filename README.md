@@ -8,6 +8,9 @@ This project aims to develop an intelligent search tool that empowers users to r
 The solution I propose and illustrate is Search and retrieval- Augmented Generation. This makes the system more intelligent, using large language models to respond to user queries (search) not only can users search for offers but also get recommendations and other vital information.
 The creation of this LLM-powered search engine encompasses essential steps such as data preparation, feature engineering, embedding, vector space modeling, prompt engineering, and automation through Continuous Integration and Continuous Deployment (CI/CD) practices. All of these processes are facilitated using software design principles and Machine Learning Operations (MLOps) tools and methodologies.
 
+### LLM Powered Search Engine Architecture
+![Semantic description of image](https://github.com/sofarikasid/LLM_Search_Engine/blob/main/llm_search_engine_.jpg)
+
  ### How to Run:
  ```diff
 clone repo
@@ -21,4 +24,3 @@ $ python app.py
 https://huggingface.co/spaces/sofarikasid/LLM_Search_Engine
 ```
 
-![Semantic description of image](https://github.com/sofarikasid/LLM_Search_Engine/blob/main/llm_search_engine_.jpg)
