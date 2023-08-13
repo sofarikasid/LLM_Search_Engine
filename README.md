@@ -21,4 +21,4 @@ $ python app.py
 https://huggingface.co/spaces/sofarikasid/LLM_Search_Engine
 ```
 
-![llm_search_engine_](https://github.com/sofarikasid/LLM_Search_Engine/assets/33644535/d0e8d044-cba8-447c-a2b8-775ae50866d1)
+![Semantic description of image](https://github.com/sofarikasid/LLM_Search_Engine/blob/main/llm_search_engine_.jpg)
