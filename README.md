@@ -17,7 +17,7 @@ clone repo
 $ python -m venv .venv
 $ source .venv/bin/activate
 $ make install
-$ python app.py
+$ streamlit run app.py
 ```
 ### Hosted Hugging Face Link
  ```diff
